@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{487A676D-01BC-05A1-9516-06ECAE54FB4B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/customizeTraits.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Subject.cs">
     <Files>
       <File FileName="Assets/scripts/Player_Controller.cs" Line="37" Column="64" />
-      <File FileName="Assets/scripts/gameManager.cs.meta" Line="1" Column="1" />
-      <File FileName="Assets/manager.cs" Line="11" Column="34" />
-      <File FileName="Assets/customizeTraits.cs" Line="7" Column="24" />
+      <File FileName="Assets/scripts/manager.cs" Line="11" Column="34" />
+      <File FileName="Assets/scripts/customizeTraits.cs" Line="50" Column="9" />
+      <File FileName="Assets/scripts/GameMenu.cs" Line="9" Column="76" />
+      <File FileName="Assets/scripts/manageMenus.cs" Line="23" Column="38" />
+      <File FileName="Assets/scripts/Data.cs" Line="10" Column="32" />
+      <File FileName="Assets/scripts/Subject.cs" Line="5" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

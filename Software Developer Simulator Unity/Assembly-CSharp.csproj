@@ -62,10 +62,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\customizeTraits.cs" />
-    <Compile Include="Assets\manager.cs" />
     <Compile Include="Assets\scripts\cameraScript.cs" />
+    <Compile Include="Assets\scripts\customizeTraits.cs" />
+    <Compile Include="Assets\scripts\Data.cs" />
+    <Compile Include="Assets\scripts\GameMenu.cs" />
+    <Compile Include="Assets\scripts\manageMenus.cs" />
+    <Compile Include="Assets\scripts\manager.cs" />
     <Compile Include="Assets\scripts\Player_Controller.cs" />
+    <Compile Include="Assets\scripts\Subject.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -110,6 +114,18 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/suryajasper2004/Documents/GitHub/Software-Developer-Simulator/Software Developer Simulator Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>/Users/suryajasper2004/Documents/GitHub/Software-Developer-Simulator/Software Developer Simulator Unity/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>/Users/suryajasper2004/Documents/GitHub/Software-Developer-Simulator/Software Developer Simulator Unity/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>/Users/suryajasper2004/Documents/GitHub/Software-Developer-Simulator/Software Developer Simulator Unity/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>/Users/suryajasper2004/Documents/GitHub/Software-Developer-Simulator/Software Developer Simulator Unity/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.10f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

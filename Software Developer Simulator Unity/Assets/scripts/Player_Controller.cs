@@ -11,6 +11,7 @@ public class Player_Controller : MonoBehaviour
 
     public Camera [] cams;
     public RawImage crosshair;
+    public float range;
 
     [Header ("Movement")]
     public float speed;
@@ -27,6 +28,30 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (animator.GetBool("isSitting"))
+            {
+                rb.isKinematic = false;
+                GetComponent<Collider>().enabled = true;
+                animator.SetBool("isSitting", false);
+            }
+            else
+            {
+                Collider[] colliders = Physics.OverlapSphere(transform.position, range);
+                foreach (Collider objcollider in colliders)
+                {
+                    if (objcollider.gameObject.CompareTag("chair"))
+                    {
+                        rb.isKinematic = true;
+                        GetComponent<Collider>().enabled = false;
+                        transform.position = objcollider.transform.position;
+                        animator.SetBool("isSitting", true);
+                        break;
+                    }
+                }
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 scale = crosshair.rectTransform.localScale;
