@@ -13,6 +13,8 @@ public class displayGrades : MonoBehaviour
     public GameObject gradeToInstantiate;
     public GameObject modelGrade;
 
+    public Transform parent;
+
     public float offset;
     List<Button> buttons;
 
@@ -24,8 +26,7 @@ public class displayGrades : MonoBehaviour
             buttons = new List<Button>();
         foreach (Subject subject in classes)
         {
-            Button button = Instantiate(buttonToInstantiate).GetComponent<Button>();
-            button.transform.parent = transform;
+            Button button = Instantiate(buttonToInstantiate, parent).GetComponent<Button>();
             if (buttons.Count > 0)
             {
                 button.transform.position = model.transform.position + new Vector3(0, (-button.GetComponent<RectTransform>().rect.height-offset)*buttons.Count, 0);
@@ -55,7 +56,7 @@ public class displayGrades : MonoBehaviour
 
         foreach (string cat in course.gradeDict.Keys)
         {
-            TMP_Text catUI = Instantiate(catToInstantiate, transform).GetComponent<TMP_Text>();
+            TMP_Text catUI = Instantiate(catToInstantiate, parent).GetComponent<TMP_Text>();
             if (stuff.Count == 0)
             {
                 catUI.gameObject.transform.position = modelCat.transform.position;
@@ -71,7 +72,7 @@ public class displayGrades : MonoBehaviour
             stuff.Add(catUI);
             foreach(Subject.Grade grade in course.gradeDict[cat])
             {
-                TMP_Text gradeUI = Instantiate(gradeToInstantiate, transform).GetComponent<TMP_Text>();
+                TMP_Text gradeUI = Instantiate(gradeToInstantiate, parent).GetComponent<TMP_Text>();
                 gradeUI.gameObject.transform.position = stuff[stuff.Count - 1].gameObject.transform.position - new Vector3(0, gradeUI.GetComponent<RectTransform>().rect.height, 0);
                 Vector3 vec3 = gradeUI.gameObject.transform.position;
                 gradeUI.gameObject.transform.position = new Vector3(modelGrade.gameObject.transform.position.x, vec3.y, vec3.z);

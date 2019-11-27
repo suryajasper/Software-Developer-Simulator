@@ -24,6 +24,12 @@ public class manager : MonoBehaviour
             subj.addGrade("quizzes", "Quiz 2", "12/15");
             subj.addGrade("tests", "Test 1", "98/100");
             subj.addGrade("tests", "Test 2", "87/100");
+            subj.addGrade("tests", "Test 3", "98/100");
+            subj.addGrade("tests", "Test 4", "87/100");
+            subj.addGrade("tests", "Test 5", "98/100");
+            subj.addGrade("tests", "Test 6", "87/100");
+            subj.addGrade("tests", "Test 7", "98/100");
+            subj.addGrade("tests", "Test 8", "87/100");
         }
     }
 

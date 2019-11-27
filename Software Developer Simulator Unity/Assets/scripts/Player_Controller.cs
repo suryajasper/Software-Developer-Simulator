@@ -56,6 +56,11 @@ public class Player_Controller : MonoBehaviour
         {
             Vector3 scale = crosshair.rectTransform.localScale;
             crosshair.rectTransform.localScale = new Vector3(scale.x*1.25f, scale.y*1.25f, scale.z);
+            GameObject raycast = GetRayCast();
+
+            if (raycast != null && raycast.GetComponent<DoorScript>() != null) {
+                raycast.GetComponent<DoorScript>().ManipulateDoor();
+            }
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -73,11 +78,15 @@ public class Player_Controller : MonoBehaviour
         float rawYForce = Input.GetAxis("Vertical");
         float xForce = rawXForce * (!Input.GetKey("tab") ? speed : speed * 1.5f);
         float yForce = rawYForce * (!Input.GetKey("tab") ? speed : speed * 1.5f);
+        if (Input.GetKey("tab"))
+            animator.SetBool("sprinting", true);
+        else
+            animator.SetBool("sprinting", false);
         transform.Translate(new Vector3(xForce, 0, yForce));
         animator.SetFloat("speed", rawYForce);
         transform.rotation = Quaternion.Euler(0, cams[curr].GetComponent<cameraScript>().currentY, 0);
     }
-    private GameObject GetRayCast(int range)
+    private GameObject GetRayCast()
     {
         RaycastHit hit;
         if (Physics.Raycast(cams[curr].transform.position, cams[curr].transform.forward, out hit, range))
