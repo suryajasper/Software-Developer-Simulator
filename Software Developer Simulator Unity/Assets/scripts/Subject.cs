@@ -14,7 +14,7 @@ using UnityEngine;
         public float possiblePoints;
         public float earnedPoints;
 
-        public Grade(string aT, float pP, float eP)
+        public Grade(string aT, float eP, float pP)
         {
             assignmentTitle = aT;
             possiblePoints = pP;
@@ -22,7 +22,7 @@ using UnityEngine;
         }
     }
 
-    private Dictionary<string, List<Grade>> gradeDict;
+    public Dictionary<string, List<Grade>> gradeDict;
 
     public Subject(string name)
     {
@@ -31,7 +31,22 @@ using UnityEngine;
     }
     public void addGrade(string category, string title, string grade)
     {
-        gradeDict[category].Add(new Grade(title, float.Parse(grade.Split('/')[0]), float.Parse(grade.Split('/')[1])));
+        bool found = false;
+        foreach (string cat in gradeDict.Keys)
+        {
+            if (cat == category)
+            {
+                found = true;
+                break;
+            }
+        }
+        if (found)
+            gradeDict[category].Add(new Grade(title, float.Parse(grade.Split('/')[0]), float.Parse(grade.Split('/')[1])));
+        else
+        {
+            string[] gradeSplit = grade.Split('/');
+            gradeDict.Add(category, new List<Grade> { new Grade(title, float.Parse(gradeSplit[0]), float.Parse(gradeSplit[1])) });
+        }
     }
 
     public string getCatGradeAsString(string category)
@@ -55,7 +70,7 @@ using UnityEngine;
             }
             if (System.Math.Abs(possibleSum) < 0.5f)
                 return null;
-            return System.Math.Round(possibleSum, 1, System.MidpointRounding.ToEven).ToString() + "/" + System.Math.Round(receivedSum, 1, System.MidpointRounding.ToEven).ToString();
+            return System.Math.Round(receivedSum, 1, System.MidpointRounding.ToEven).ToString() + "/" + System.Math.Round(possibleSum, 1, System.MidpointRounding.ToEven).ToString();
         } 
         return null;
     }
@@ -63,7 +78,7 @@ using UnityEngine;
     {
         string str = getCatGradeAsString(category);
         if (str == null) return -1f;
-        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]);
+        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]) * 100f;
     }
     public string getAssignmentGradeAsString(string assignmentName)
     {
@@ -77,7 +92,7 @@ using UnityEngine;
     {
         string str = getAssignmentGradeAsString(assignmentName);
         if (str == null) return -1f;
-        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]);
+        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]) * 100f;
     }
     public string getGradeAsString()
     {
@@ -97,6 +112,6 @@ using UnityEngine;
     {
         string str = getGradeAsString();
         if (str == null) return -1f;
-        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]);
+        return float.Parse(str.Split('/')[0]) / float.Parse(str.Split('/')[1]) * 100f;
     }
 }

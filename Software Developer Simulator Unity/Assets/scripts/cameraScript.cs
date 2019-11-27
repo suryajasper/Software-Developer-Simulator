@@ -13,11 +13,11 @@ public class cameraScript : MonoBehaviour
     [HideInInspector] public float velocityY;
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
     }
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         xRot -= sensitivity * Input.GetAxis("Mouse Y");
         yRot += sensitivity * Input.GetAxis("Mouse X");
         xRot = Mathf.Clamp(xRot, -90, 90);
