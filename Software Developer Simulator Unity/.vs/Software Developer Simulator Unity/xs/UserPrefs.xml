@@ -1,17 +1,19 @@
 ﻿<Properties StartupConfiguration="{487A676D-01BC-05A1-9516-06ECAE54FB4B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/DoorScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Teacher.cs">
     <Files>
-      <File FileName="Assets/scripts/Player_Controller.cs" Line="61" Column="17" />
+      <File FileName="Assets/scripts/Player_Controller.cs" Line="84" Column="40" />
       <File FileName="Assets/scripts/manager.cs" Line="31" Column="56" />
       <File FileName="Assets/scripts/customizeTraits.cs" Line="50" Column="9" />
       <File FileName="Assets/scripts/GameMenu.cs" Line="9" Column="76" />
       <File FileName="Assets/scripts/manageMenus.cs" Line="23" Column="38" />
       <File FileName="Assets/scripts/Data.cs" Line="10" Column="32" />
       <File FileName="Assets/scripts/Subject.cs" Line="17" Column="51" />
-      <File FileName="Assets/scripts/clockScript.cs" Line="15" Column="1" />
+      <File FileName="Assets/scripts/clockScript.cs" Line="28" Column="12" />
       <File FileName="Assets/scripts/displayGrades.cs" Line="27" Column="45" />
       <File FileName="Assets/scripts/cameraScript.cs" Line="18" Column="39" />
-      <File FileName="Assets/DoorScript.cs" Line="9" Column="10" />
+      <File FileName="Assets/DoorScript.cs" Line="15" Column="22" />
+      <File FileName="Assets/scripts/Teacher.cs" Line="43" Column="33" />
+      <File FileName="Assets/Classroom.cs" Line="9" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

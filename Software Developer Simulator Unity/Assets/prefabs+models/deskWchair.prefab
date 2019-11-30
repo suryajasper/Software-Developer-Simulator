@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1754757231811540846}
   - component: {fileID: 5433222470602017687}
   - component: {fileID: 237325785691006633}
+  - component: {fileID: 3552245903479375409}
   m_Layer: 0
   m_Name: deskWchair
   m_TagString: Untagged
@@ -96,6 +97,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 629152118297283433, guid: 4f7f9954f3b5442d7b3e1570cf1c60bf, type: 3}
+--- !u!208 &3552245903479375409
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006246095107489611}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 60.000004, y: 49.000004, z: 36.7}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 36.7}
+  m_TimeToStationary: 0.5
 --- !u!64 &3770075099113523290
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -110,6 +127,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -1238218227891777710, guid: 5efba0d92368a4897a9ec37145d1db89, type: 3}
+--- !u!208 &7161550856108522830
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232991585228074567}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.2, y: 0.24000001, z: 0.476}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.476}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2711701083910829902
 PrefabInstance:
   m_ObjectHideFlags: 0
