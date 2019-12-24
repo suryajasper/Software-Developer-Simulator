@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{487A676D-01BC-05A1-9516-06ECAE54FB4B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Teacher.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/phoneScript.cs">
     <Files>
       <File FileName="Assets/scripts/Player_Controller.cs" Line="84" Column="40" />
       <File FileName="Assets/scripts/manager.cs" Line="31" Column="56" />
@@ -14,6 +14,7 @@
       <File FileName="Assets/DoorScript.cs" Line="15" Column="22" />
       <File FileName="Assets/scripts/Teacher.cs" Line="43" Column="33" />
       <File FileName="Assets/Classroom.cs" Line="9" Column="28" />
+      <File FileName="Assets/phoneScript.cs" Line="37" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
