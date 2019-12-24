@@ -62,17 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Classroom.cs" />
-    <Compile Include="Assets\DoorScript.cs" />
-    <Compile Include="Assets\phoneScript.cs" />
     <Compile Include="Assets\scripts\cameraScript.cs" />
+    <Compile Include="Assets\scripts\Classroom.cs" />
     <Compile Include="Assets\scripts\clockScript.cs" />
     <Compile Include="Assets\scripts\customizeTraits.cs" />
     <Compile Include="Assets\scripts\Data.cs" />
     <Compile Include="Assets\scripts\displayGrades.cs" />
+    <Compile Include="Assets\scripts\DoorScript.cs" />
     <Compile Include="Assets\scripts\GameMenu.cs" />
     <Compile Include="Assets\scripts\manageMenus.cs" />
     <Compile Include="Assets\scripts\manager.cs" />
+    <Compile Include="Assets\scripts\phoneScript.cs" />
     <Compile Include="Assets\scripts\Player_Controller.cs" />
     <Compile Include="Assets\scripts\Subject.cs" />
     <Compile Include="Assets\scripts\Teacher.cs" />

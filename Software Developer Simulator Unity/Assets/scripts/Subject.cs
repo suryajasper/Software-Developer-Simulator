@@ -9,6 +9,7 @@ using UnityEngine;
     [Range(0f, 1f)] public float chanceOfPopQuiz;
     [Range(0,7)] public int testFrequency;
     [Range(0, 7)] public int essayFrequency;
+
     public struct Grade {
         public string assignmentTitle;
         public float possiblePoints;

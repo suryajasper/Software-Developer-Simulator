@@ -8,16 +8,18 @@ using TMPro;
 public class Teacher : MonoBehaviour
 {
     private NavMeshAgent agent;
-    //public Subject subject;
-    //public Classroom classroom;
-    public GameObject tmpParent;
 
     private TMP_Text talkOut;
     private Button talkForward;
+    private Animator anim;
+
+    public Classroom classroom;
+    public GameObject tmpParent;
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         talkOut = tmpParent.transform.GetChild(0).GetComponent<TMP_Text>();
         talkForward = tmpParent.transform.GetChild(1).GetComponent<Button>();
         tmpParent = talkOut.gameObject.transform.parent.gameObject;
@@ -30,15 +32,21 @@ public class Teacher : MonoBehaviour
         //Debug.Log(clockScript.currentTime.minute);
         if (clockScript.currentTime.hour == 8 && clockScript.currentTime.minute == 0 && !tmpParent.activeSelf)
         {
-            Debug.Log("SUCCESS");
-            Talk(new string[] { "Welcome back to class students.", "I hate all of you." });
+            Vector3 destination = classroom.podium.transform.position;
+            agent.SetDestination(new Vector3(destination.x, destination.y, destination.z + classroom.podium.GetComponent<Collider>().bounds.size.z));
+        }
+        anim.SetBool("moving", agent.hasPath);
+        if (agent.hasPath && agent.remainingDistance < 0.25f)
+        {
+            agent.isStopped = true;
+            Talk("Welcome back to class students.", "I hate all of you.");
         }
     }
     private Collider [] FindCloseObjects(float radius)
     {
         return Physics.OverlapSphere(transform.position, 3f);
     }
-    private void Talk(string [] words)
+    private void Talk(params string [] words)
     {
         clockScript.PauseTime();
         Debug.Log("We're here");
