@@ -15,6 +15,7 @@ public class Teacher : MonoBehaviour
 
     public Classroom classroom;
     public GameObject tmpParent;
+    public TMP_Text blackboard;
 
     // Start is called before the first frame update
     void Start()
@@ -41,10 +42,17 @@ public class Teacher : MonoBehaviour
             agent.isStopped = true;
             Talk("Welcome back to class students.", "I hate all of you.");
         }
+
     }
     private Collider [] FindCloseObjects(float radius)
     {
         return Physics.OverlapSphere(transform.position, 3f);
+    }
+    private void WriteToBlackboard(string text)
+    {
+        agent.SetDestination(blackboard.transform.parent.gameObject.transform.position);
+        anim.SetBool("isDrawing", true);
+        blackboard.text = text;
     }
     private void Talk(params string [] words)
     {
